@@ -1,17 +1,24 @@
+
 services:
   - type: web
     name: inkloom-ai
-    env: docker
+    runtime: docker
     plan: free
     region: oregon
     dockerfilePath: ./Dockerfile
-    envVars:
-      - key: PORT
-        value: 8080
-      - key: SPRING_DATASOURCE_URL
-        value: jdbc:mysql://YOUR_MYSQL_HOST:3306/inkloom_db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-      - key: SPRING_DATASOURCE_USERNAME
-        value: root
-      - key: SPRING_DATASOURCE_PASSWORD
-        value: root@2007
     autoDeploy: true
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        sync: false
+      - key: SPRING_DATASOURCE_USERNAME
+        sync: false
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+      - key: INKLOOM_JWT_SECRET
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: AI_ENDPOINT
+        value: https://api.openai.com/v1
+      - key: AI_MODEL
+        value: gpt-4o-mini
