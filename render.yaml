@@ -13,5 +13,5 @@ services:
       - key: SPRING_DATASOURCE_USERNAME
         value: root
       - key: SPRING_DATASOURCE_PASSWORD
-        value: yourpassword
+        value: root@2007
     autoDeploy: true
