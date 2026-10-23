@@ -1,0 +1,10 @@
+.git
+.gitignore
+.idea
+*.log
+backend/target
+frontend/dist
+frontend/node_modules
+README.md
+*.ps1
+*.bat

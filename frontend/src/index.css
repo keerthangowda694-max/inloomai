@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #080B12;
+    color: #F5F6FF;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(16, 21, 37, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 91, 255, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(169, 155, 255, 0.6);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(16, 21, 37, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  background: rgba(23, 30, 52, 0.85);
+  border-color: rgba(99, 91, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px rgba(99, 91, 255, 0.25);
+}
+
+.glass-input {
+  background: rgba(11, 15, 29, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #F5F6FF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.glass-input:focus {
+  outline: none;
+  border-color: #635BFF;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.25);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5F6FF 50%, #A99BFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-indigo {
+  background: linear-gradient(135deg, #A99BFF 0%, #635BFF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-subtle {
+  border-color: rgba(255, 255, 255, 0.08);
+}
